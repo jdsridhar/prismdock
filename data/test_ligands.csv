@@ -1,0 +1,4 @@
+id,smiles,label
+staurosporine,C[C@@]12[C@@H]([C@@H](C[C@@H](O1)N3C4=CC=CC=C4C5=C6C(=C7C8=CC=CC=C8N2C7=C53)CNC6=O)NC)OC,1
+adenine,c1nc(c2c(n1)n(cn2)[H])N,1
+caffeine,Cn1cnc2c1c(=O)n(C)c(=O)n2C,0
