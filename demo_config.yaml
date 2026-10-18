@@ -1,0 +1,7 @@
+target: {pdb: null, infile: "results/live_run/target/1hvr.pdb", ph: 7.4}
+pocket: {padding: 5.0, apo_size: 22.0, force_center: null, force_size: null}
+library: {csv: "data/test_ligands.csv", limit: null}
+docking: {engines: [vina, smina], exhaustiveness: 8, n_poses: 9, seed: 42, smina_bin: "smina"}
+rescoring: {gnina_cnn: false, diffdock: false}
+validation: {redock_native: true, enrichment: true}
+output: {outdir: "results/demo_1hvr", report: true}

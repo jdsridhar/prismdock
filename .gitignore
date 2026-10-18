@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Binaries & Large Vendor Models (>100MB, exceeds GitHub limit)
+gnina
+vendor/
+
+# IDE & Editor Configs
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+
+# Logs & Temporary Files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Dynamic runtime results (keep benchmark rehearsal)
+results/live_run/
+results/demo_*/
+results/temp_*/

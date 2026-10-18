@@ -1,0 +1,33 @@
+name: docking
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - rdkit>=2025.03
+  - openbabel>=3.1
+  - vina=1.2.7
+  - smina
+  - fpocket
+  - pdbfixer=1.12.0
+  - openmm>=8.5
+  - scikit-learn>=1.9
+  - numpy>=2.4
+  - pandas>=3.0
+  - scipy>=1.17
+  - matplotlib>=3.10
+  - pyyaml>=6.0
+  - requests>=2.34
+  - streamlit>=1.58
+  - plotly>=6.8
+  - pip
+  - pip:
+      - meeko==0.7.1
+      - gemmi==0.7.5
+      - stmol==0.0.9
+      - stqdm==0.2.1
+      - py3Dmol==2.5.5
+      - tabulate==0.10.0
+      - ipython_genutils
+      - prolif==2.2.0
+      - MDAnalysis==2.10.0

@@ -1,0 +1,45 @@
+# ============================================================================
+# Dockathon consensus-docking pipeline — single config file.
+# On event day: set `target.pdb` to the assigned PDB ID (or point at a local
+# structure / AlphaFold model), set the library, and run:
+#     python run_dockathon.py --config config.yaml
+# ============================================================================
+
+target:
+  # ONE of pdb / infile is required.
+  pdb: "1H00"              # RCSB PDB ID to fetch (CDK2 example)
+  infile: null             # OR a local .pdb / .cif / AlphaFold model
+  ph: 7.4                  # protonation pH for receptor prep
+
+pocket:
+  # Box is auto-detected: ligand-guided if a co-crystal ligand exists,
+  # else fpocket cavity detection. Override center/size to force a box.
+  padding: 5.0             # A added around the native ligand
+  apo_size: 22.0           # cube size (A) when using fpocket
+  force_center: null       # e.g. [12.3, 4.5, 30.1] to override
+  force_size: null         # e.g. [22, 22, 22]
+
+library:
+  # CSV with columns: id, smiles [, label]  (label: 1=active, 0=decoy)
+  csv: "data/cdk2_dryrun_library.csv"
+  limit: null              # cap number of ligands (null = all)
+
+docking:
+  engines: ["vina", "smina"]   # consensus core (both CPU-fast)
+  exhaustiveness: 8
+  n_poses: 9
+  seed: 42
+  smina_bin: "smina"
+
+# Optional GPU rescoring — only used if enabled AND a GPU is present.
+rescoring:
+  gnina_cnn: false         # GNINA CNN pose rescoring (needs GPU + gnina binary)
+  diffdock: false          # DiffDock-L blind poses (needs GPU)
+
+validation:
+  redock_native: true      # redock the crystal ligand, report RMSD to crystal
+  enrichment: true         # compute AUC/EF/BEDROC if the library has labels
+
+output:
+  outdir: "results/run"
+  report: true             # emit report.md + figures
