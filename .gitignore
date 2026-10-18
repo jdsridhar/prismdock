@@ -46,7 +46,12 @@ vendor/
 .DS_Store
 Thumbs.db
 
-# Dynamic runtime results (keep benchmark rehearsal)
-results/live_run/
+# Dynamic runtime results & coordinate poses (keep benchmark reports & metrics)
+results/*/docking/poses/
+results/live_run*/
+results/e2e_test/
 results/demo_*/
 results/temp_*/
+
+# Local thesis packets
+guide_packets/

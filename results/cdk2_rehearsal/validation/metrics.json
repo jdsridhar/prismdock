@@ -1,0 +1,12 @@
+{
+  "n_total": 43,
+  "n_actives": 18,
+  "n_decoys": 25,
+  "auc_roc": 0.7044,
+  "EF_1pct": 2.389,
+  "EF_5pct": 1.194,
+  "EF_10pct": 1.194,
+  "BEDROC_a20": 0.6327,
+  "auc_vina": 0.5889,
+  "auc_smina": 0.8
+}
